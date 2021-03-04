@@ -10,4 +10,19 @@ $( document ).ready(function() {
         $('.menu-toggler').removeClass('open');
         $('.top-nav').removeClass('open');
     });
+
+    /* $('nav a[href*="#"]' ).on('click', function(){
+        $('html, body' ).animate(keyframes: {
+            scrollTop $($(this).attr('href')).offset().top - 100
+
+        }, Options(2000))
+    
+    }); */
+
+    AOS.init({
+        easing: 'ease',
+        duration:1800,
+        once: true,
+    });
+
 });
