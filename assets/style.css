@@ -1,12 +1,188 @@
 
 
+/* Global Scope */
 
+html{
+    cursor: url('./images/Homework-Cursor.png'), auto;
+    height: 100%;
+}
 
+body {
+    width: 100%;
+    height: 100%;
+    background: url("") no-repeat center fixed;
+    background-size: cover;
+    background-color: #D36532; 
+}
 
+p {
+    font-size: 11px;
+    color: white; 
+    font-family: 'Exo 2', sans-serif; 
+    font-weight: 300;
+    font-size: 1.1rem;
+}
 
+a {
+    text-decoration: none;
+    color: white;
+}
 
-
+img {
+ 
+}
 
 .Mnnrz-Logo{
     max-width: 18%;
 }
+
+/*End global*/
+
+
+
+/*Start reusable*/
+/*End reusable*/
+
+
+
+/*Start header*/
+header {
+    width: 100%;
+    height: 100vh;
+}
+.top-nav{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: -100vh;
+    background-color: #D36532;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    transition: all 650ms cubic-bezier(1,0,0,1);
+}
+
+.nav-list{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    margin: 0 2rem;
+}
+
+.nav-link{
+    color: yellow;
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+
+.nav-link:hover,
+.nav-link:focus{
+    background:#77F5C2 ;
+    color: yellow;
+
+}
+
+.top-nav.open{
+    top:0;
+    border-radius: initial;
+
+}
+
+.menu-toggler{
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    height:2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1500;
+    transition: transform 650ms ease-out;
+
+}
+
+.menu-toggler.open{
+    transform: rotate(-45deg);
+
+}
+
+.bar{
+    background:linear-gradient(to right, #D36532, yellow);
+    width: 100%;
+    height: 4px;
+    border-radius: .2rem;
+    
+}
+
+.bar.half{
+    width: 65%;
+}
+.bar.start{
+    transform-origin: right;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57,0.57)
+}
+
+.open .bar.start{
+    transform: rotate(-450deg) translateX(.8rem);
+
+}
+
+.bar.end{
+    align-self: flex-end;
+    transform-origin: left;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57,0.57)
+}
+
+.open .bar.end{
+    transform: rotate(-450deg) translateX(-.8rem);
+    
+}
+
+
+/*End header*/
+
+
+
+/*Start about*/
+/*End about*/
+
+
+
+/*Start services*/
+/*End services*/
+
+
+
+/*Start portfolio*/
+/*End services*/
+
+
+
+/*Start timeline*/
+/*End timeline*/
+
+
+
+/*Start contact*/
+/*End contact*/
+
+
+
+/*Start footer*/
+/*End footer*/
+
+
+
+/*Start animations*/
+/*End animations*/
+
+
+
+/*Start media queries*/
+/*End media queries*/
