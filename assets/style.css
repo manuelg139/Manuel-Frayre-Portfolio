@@ -250,8 +250,8 @@ li{
     width: 450px; 
     height: auto;
     float: left;
-    shape-outside: url('./images/MNNRZ-LOGO-Small.png');
-    shape-margin: 1px;
+    shape-outside: url('./assets/images/MNNRZ-LOGO-Small.png');
+    shape-margin: 10px;
     margin-top: -80px;
 }
 
@@ -600,6 +600,7 @@ input[type="submit"]:hover{
     
         width: 500px; 
         height: auto;
+        margin: 5px;
         float: inline-start;
         
     }
