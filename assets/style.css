@@ -41,10 +41,44 @@ section{
     padding: 4rem 0;
 }
 
+h2{
+    font-family: 'Press Start 2P', cursive; 
+    position: relative;
+    color: #D36532;
+    -webkit-text-stroke: .0 yellow;
+    font-size: 4rem;
+    box-sizing: border-box;
+
+}
+
+h2::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000%;
+    height: 100%;
+    color: yellow;
+    -webkit-text-stroke: 0.0 yellow;
+    border-right: 12px solid yellow;
+    overflow: hidden;
+    animation: animate 12s linear infinite;
+
+}
+
+@keyframes animate {
+    0%, 20%, 100%
+    {
+        width: 0;
+    }
+    50%,90%
+    {
+        width: 100%;
+    }
+}
+
 
 /*End global*/
-
-
 
 /*Start reusable*/
 
@@ -60,6 +94,7 @@ section{
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .title-gif{
@@ -101,17 +136,20 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 li{
-    margin: 0 2rem;
+    margin: 0 1rem;
 }
 
 .nav-link{
     color: yellow;
     font-family: 'Press Start 2P', cursive; 
-    font-size: 2.5rem;
-    padding: 1rem;
+    font-size: 3rem;
+    padding: 0;
+    margin: 2rem 0;
+    
 }
 
 .nav-link:hover,
@@ -252,8 +290,18 @@ li{
     float: left;
     shape-outside: url('./assets/images/MNNRZ-LOGO-Small.png');
     shape-margin: 10px;
-    margin-top: -80px;
+    margin-top: -45px;
 }
+
+.wrapper{
+    max-height: 450px;
+    display: flexbox;
+    overflow-y: auto;
+}
+
+
+
+
 
 /* 
 .social-media{
@@ -267,25 +315,47 @@ li{
 
 .nav-social{
     /* list-style: none; */
-    width: 100%;
-    height: 100%;
-    /* display: inline-flex ; */
+    display: inline-flex ; 
     justify-content: center;
     align-items: center;
+    text-align: center;
+    margin-bottom: 55px;
+ 
+    
+}
+.nav-wrapper{
+    width: 100%;
+    height: 100%;
+    margin: 0 3rem 0 3rem ;
+    display: inline-flex ;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
 }
 
+.social-p {
+    font-size: 15px;
+    color: white; 
+    font-family: 'Exo 2', sans-serif; 
+    font-weight: 300;
+    margin-right: 25px;
+   
+}
 .social-thumb{
-    height: 70px;
+    height: 40px;
     width: auto;
-    margin-left: 50px;
+    margin-left: 5px;
     color: white;
     text-align: center;
+    margin-top: 20px;
     border: 2.5px solid #D36532;
+    vertical-align: -18px;
   
 }
 
 .social-thumb:hover{
-    border: 2.5px solid #77F5C2;
+    /* border: 2.5px solid #77F5C2; */
   
 }
 /* 
@@ -348,12 +418,14 @@ li{
     font-weight: 300;
     color: yellow;
     font-family: 'Press Start 2P', cursive; 
+    margin: 10px 0px 10px 0px;
 }
 
 .portfolio-item h5{
     font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 300;
+    margin: 30px 0px 10px 0px;
     font-family: 'Exo 2', sans-serif; 
     color: aqua;
 }
@@ -368,7 +440,7 @@ li{
 
 .portfolio-item .view-details{
     display: inline-block;
-    margin-top: 2.5rem;
+    margin-top: .5rem;
     background-color: #77F5C2; 
     border: solid yellow 2px;
     width: 250px;
@@ -391,6 +463,123 @@ li{
 
 
 /*Start timeline*/
+
+
+.timeline{
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+}
+.timeline ul{
+    border-left: 4px solid #77F5C2;
+    border-radius: .8rem;
+    background-color: #D36532;
+    margin-left: 400px;
+    position: relative;
+    padding: 5rem;
+    list-style: none;
+    text-align: left;
+    width: 70%;
+
+}
+
+.timeline h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    opacity:  80%;
+    text-transform: uppercase;
+        font-weight: 300;
+        color: yellow;
+        font-family: 'Press Start 2P', cursive; 
+}
+
+.timeline .date{
+    border-bottom: 1px solid #77F5C2;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
+
+}
+
+.timeline .date:last-of-type{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+}
+
+.timeline .date::before,
+.timeline .date::after{
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline .date::before{
+    content: attr(data-date);
+    left: -19rem;
+    text-align: right;
+    min-width: 5rem;
+    font-size: 11px;
+    line-height: 20px;
+    color: yellow;
+    background-color: #77F5C2 ;
+    boorder: 2px yellow solid;
+    font-family: 'Press Start 2P', cursive; 
+    font-weight: 400;
+}
+
+.timeline .date::after{
+    content: '';
+    box-shadow: 0 0 0 4px yellow;
+    border-radius: 100%;
+    left: -6.9rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #d46e3e;
+}
+
+.experience h6{
+    font-size: 2em;
+    font-weight: 00;
+    color: white;
+    font-family: 'Exo 2', sans-serif; 
+    margin: .2rem;
+}
+
+.timeline h5{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 4px;
+    font-family: 'Exo 2', sans-serif; 
+    color: aqua;
+}
+
+.resume-link{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    opacity:  80%;
+    text-transform: uppercase;
+        font-weight: 300;
+        color: aqua;
+        font-family: 'Press Start 2P', cursive; 
+}
+
+.resume-link:hover,
+.resume-link:focus{
+  
+    color: yellow ;
+
+}
+
+
 /*End timeline*/
 
 
@@ -551,6 +740,10 @@ input[type="submit"]:hover{
     .nav-link{
         font-size: 2.5rem;
     }
+
+    h2{
+        font-size: 2.6rem;
+    }
     
 }
 /* everything under 768px */
@@ -635,6 +828,24 @@ input[type="submit"]:hover{
         float: right;
     }
     
+    .timeline ul{
+   
+        margin-left: 200px;
+       
+        width: 80%;
+    
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+
+
+    .timeline h1{
+        font-size: 1.5rem;
+       
+    }
+
 }
 
 
@@ -731,6 +942,27 @@ input[type="submit"]:hover{
         width: 70%;
         margin: auto 40px ;
     }
+
+
+    .timeline ul{
+   
+        margin-left: 250px;
+        width: 50%;
+    
+    }
+    .timeline {
+        width: 50%;
+    }
+
+    h2{
+        font-size: 1rem;
+    }
+    
+    .timeline h1{
+        font-size: 1rem;
+       
+    }
+
 
 }
 
