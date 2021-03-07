@@ -15,13 +15,13 @@ body {
     background-color: #D36532; 
 }
 
-p {
+/* p {
     font-size: 11px;
     color: white; 
     font-family: 'Exo 2', sans-serif; 
     font-weight: 300;
     font-size: 1.1rem;
-}
+} */
 
 a {
     text-decoration: none;
@@ -317,14 +317,13 @@ li{
 }
 
 .nav-social{
-    /* list-style: none; */
     display: inline-flex ; 
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-bottom: 55px;
- 
-    
+    margin-left: 10rem;
+  
 }
 .nav-wrapper{
     width: 100%;
@@ -340,29 +339,30 @@ li{
 .social-p {
     font-size: 15px;
     color: white; 
-    font-family: 'Exo 2', sans-serif; 
+    font-family: 'Press Start 2P', cursive;  
     font-weight: 300;
     margin-right: 25px;
    
 }
-.social-thumb{
+
+
+.nav-social{
     height: 40px;
     width: auto;
-    margin-left: 5px;
     color: white;
     text-align: center;
-    margin-top: 20px;
+    margin: 20px  200px 20px 200px;
     border: 2.5px solid #D36532;
     vertical-align: -18px;
   
 }
 
-.social-thumb:hover{
+/* .social-thumb:hover{
     /* border: 2.5px solid #77F5C2; */
   
 }
 /* 
-
+ */
 
 
 /*End about*/
@@ -570,7 +570,6 @@ li{
     margin-bottom: 1rem;
     opacity:  80%;
     text-transform: uppercase;
-        font-weight: 300;
         color: aqua;
         font-family: 'Press Start 2P', cursive; 
 }
@@ -749,6 +748,10 @@ input[type="submit"]:hover{
     }
     
 }
+
+
+
+
 /* everything under 768px */
 @media screen and (max-width: 768px){
 
@@ -848,6 +851,29 @@ input[type="submit"]:hover{
         font-size: 1.5rem;
        
     }
+    
+    .wrapper{
+        max-height: 250px;
+        flex-direction: column;
+    }
+    
+    .nav-wrapper{
+        flex-direction: column;
+    }
+
+    .social-p {
+        font-size: 10px;
+    }
+
+    .resume-link{
+        font-size: 10rem;
+        
+    }
+    
+
+
+    
+
 
 }
 
@@ -862,7 +888,7 @@ input[type="submit"]:hover{
         background-size: cover;
     }
     .landing-text h1{
-        font-size: 4rem;
+        font-size: 3rem;
     }
     
     .landing-text h6{
@@ -894,11 +920,11 @@ input[type="submit"]:hover{
 
     .Mnnrz-Logo{
     
-        width: 500px; 
+        width: 150px; 
         height: auto;
-        float: inline-start;
         
     }
+    
     .about {
         margin-top: -4rem;
     }
@@ -924,7 +950,6 @@ input[type="submit"]:hover{
         margin-bottom: 15px;
     }
     
-  
 
     .portfolio-description-right img{
         width: 450px;
@@ -941,6 +966,7 @@ input[type="submit"]:hover{
         max-width: 550px;
         margin-left: -70px;    
     }
+
     form{
         width: 70%;
         margin: auto 40px ;
@@ -965,7 +991,34 @@ input[type="submit"]:hover{
         font-size: 1rem;
        
     }
+    .timeline h5{
+        font-size: .5rem;
+       
+    }
 
+    .timeline P{
+        font-size: 11px;
+       
+    }
+
+    .wrapper{
+        max-height: 250px;
+        flex-direction: column;
+    }
+    
+    .nav-wrapper{
+        flex-direction: column;
+    }
+
+    .social-p {
+        font-size: 10px;
+    }
+
+    .resume-link{
+        font-size: 1rem;
+        
+    }
+    
 
 }
 
