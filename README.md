@@ -24,6 +24,7 @@ manuelg139@gmail.com
 
 ### Screengrabs
 
+![ Manuel-Frayre-Portfolio-Gif](https://user-images.githubusercontent.com/75399668/110228276-774b1b00-7ec5-11eb-9fad-0f0b195b4d2a.gif)
 
 
 
