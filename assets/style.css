@@ -224,7 +224,7 @@ li{
 .landing-text{
     position: absolute;
     top: 50%;
-    left: 50%;
+    margin: 1rem auto;
     transform: translate(-50%, -50%);
     width:100%;
     text-align: center;
@@ -451,11 +451,16 @@ li{
     text-align: center;
 }
 
-.pportfolio-item .cta:hover{
+.portfolio-item .cta:hover{
     color: #77F5C2;
 }
 
 .portfolio-description .view-details:hover{
+    background-color: yellow; 
+    border: solid #77F5C2 2px;
+}
+
+.portfolio-description-right .view-details:hover{
     background-color: yellow; 
     border: solid #77F5C2 2px;
 }
@@ -811,7 +816,7 @@ input[type="submit"]:hover{
         color: white; 
         font-family: 'Exo 2', sans-serif; 
         font-weight: 1000;
-        font-size: 1.5rem;
+        font-size: 1rem;
         text-align: center;
         }
     
@@ -929,13 +934,9 @@ input[type="submit"]:hover{
         margin-top: -4rem;
     }
 
-    .about .container p{
-        color: white; 
-        font-family: 'Exo 2', sans-serif; 
-        font-weight: 1000;
-        font-size: 1.5rem;
-        text-align: center;
-        width: 93%;
+    
+    .about .container p {
+        font-size: 11px;
         }
     
   
